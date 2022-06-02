@@ -1,4 +1,8 @@
 // Queue - first in first out
+// Time Complexity of Queues
+// Get, search, and delete specific item from the queue - O(n)
+// Inserting item into back of queue - O(1)
+// Removing item from front of queue - O(1)
 
 class Queue {
   queue: number[]
@@ -42,3 +46,4 @@ console.log(myQueue.printQueue())
 // Insert item onto end of queue
 // 0(1) - constant time
 
+export {}

@@ -1,3 +1,9 @@
+// Time complexity of Linked List
+// Get, search item from list - O(n)
+// Insert, delete item from any position in the list - O(n)
+// Access the head or tail of list - O(1)
+
+
 const deepLog = require('../utils/deepLog')
 
 interface ListNodeType {
@@ -129,3 +135,5 @@ deepLog(myList)
 //     next: null
 //   }
 // }
+
+export {}

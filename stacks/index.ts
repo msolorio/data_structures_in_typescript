@@ -1,3 +1,7 @@
+// Stacks time complexity
+// Get, search for item in stack - O(n)
+// Insertion and deletion from the top of the stack - O(1)
+
 class Stack {
   stack: number[]
 
@@ -62,3 +66,4 @@ const reverse = function (originalArr: number[]) {
 
 // console.log(reverse([1, 2, 3]))
 
+export {}
