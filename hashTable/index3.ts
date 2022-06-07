@@ -1,3 +1,13 @@
+/*
+Implementation of a Hash Table with Bucket chaining for handling hash collisions.
+
+Time Complexity
+Accessing Items
+Best case - O(1) - Item is only one stored at hash
+Worst case - O(n) - every item gets stored at the same hash
+
+*/
+
 class BucketEntry {
   username: string
   password: string
