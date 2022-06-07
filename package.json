@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test-no-build": "mocha dist/**/**.spec.js",
+    "test": "npm run build && mocha dist/**/**.spec.js",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.38",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.16",
     "ts-node": "^10.8.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }

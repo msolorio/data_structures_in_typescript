@@ -1,1 +1,1 @@
-To watch a typescript file run `npx nodemon <path-to-file>`.
+To watch a typescript file run `npx nodemon <path-to-file>` in the root directory.
