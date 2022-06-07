@@ -11,7 +11,7 @@ const deepLog = require('../utils/deepLog')
 
 // Time complexity of hash table
 // Search, inserting, deleting items
-// Average - O(1) - we can find the item directly at the hash, no need to loop through values.
+// Average - O(1) - we can find the item directly at the hash, no need to loop through all of the values.
 // Worst - O(n) - If key value pairs are stored in list within each bucket, and all the key/value pairs get stored in the same bucket, then we need to loop through the items.
 
 interface ValuesType {
@@ -20,7 +20,6 @@ interface ValuesType {
 
 class HashTable {
   values: ValuesType // stores key/value pairs
-  // length: number // max num of items in a bucket
   size: number // number of buckets in hash table
 
   constructor() {
@@ -38,11 +37,13 @@ class HashTable {
   add(key: string, value: string) {
     const hash = this.calculateHash(key)
 
-    if (!this.values.hasOwnProperty(hash)) {
+    if (!this.values[hash]) {
       this.values[hash] = {}
-    }
 
-  this.values[hash][key] = value    
+      if (!this.values[hash][key]) {
+        this.values[hash][key] = value
+      }
+    }
   }
 
 
